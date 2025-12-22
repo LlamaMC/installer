@@ -1,0 +1,31 @@
+# Go
+/bin/
+/pkg/
+/vendor/
+
+# Build Outputs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Coverage
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDEs / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
