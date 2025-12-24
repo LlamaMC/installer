@@ -2,13 +2,11 @@ package json
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 )
 
 func ParseJsonFromUrl(url string) map[string]any {
-	fmt.Println(url)
 	response, err := http.Get(url)
 	if err != nil {
 		panic(err)

@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	versionsObject := json.ParseJsonFromUrl("https://raw.githubusercontent.com/LlamaMC/manifest/refs/heads/master/versions.json?token=GHSAT0AAAAAADJLASNRGC62LAUQD7UW2BNK2KJR3QA")
+	versionsObject := json.ParseJsonFromUrl("https://raw.githubusercontent.com/LlamaMC/manifest/refs/heads/master/versions.json")
 	manifestVersions := versionsObject["versions"].([]any)
 	var parsedVersions []util.Version
 	for _, version := range manifestVersions {
@@ -24,7 +24,7 @@ func main() {
 			Name:  version.(map[string]any)["name"].(string)})
 	}
 	util.InitializeVersions(parsedVersions)
-	configurationObject := json.ParseJsonFromUrl("https://raw.githubusercontent.com/LlamaMC/manifest/refs/heads/master/configurations.json?token=GHSAT0AAAAAADJLASNRDN6AU3UP4PTWM3BE2KJR36A")
+	configurationObject := json.ParseJsonFromUrl("https://raw.githubusercontent.com/LlamaMC/manifest/refs/heads/master/configurations.json")
 	manifestConfigurations := configurationObject["configurations"].([]any)
 	var parsedConfigurations []util.Configuration
 	for _, configuration := range manifestConfigurations {
